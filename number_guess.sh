@@ -58,12 +58,7 @@ do
 done
 
 #Inform user that they made the correct guess with info.
-if [[ $GUESS_TRACKER == 1 ]]
-then
-  echo "You guessed it in $GUESS_TRACKER tries. The secret number was $SECRET_NUM. Nice job!"
-else
-  echo "You guessed it in $GUESS_TRACKER tries. The secret number was $SECRET_NUM. Nice job!"
-fi
+echo "You guessed it in $GUESS_TRACKER tries. The secret number was $SECRET_NUM. Nice job!"
 
 #Update games table with the player id and number of guesses it took.
 PLAYER_ID=$($PSQL "SELECT player_id FROM players WHERE name='$INPUT'")
